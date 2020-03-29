@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Андрей Засорин](https://up.htmlacademy.ru/adaptive/19/user/1313067).
-* Наставник: `Неизвестно`.
+* Наставник: [Кирилл Генералов] (https://htmlacademy.ru/profile/hifull)
 
 ---
 
