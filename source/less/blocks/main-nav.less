@@ -1,0 +1,35 @@
+.main-nav {
+  position: relative;
+  min-height: 56px;
+  margin-bottom: 56px;
+}
+
+.site-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: @main-font-size;
+  line-height: 2.22;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: @text-color-reverse;
+  background-color: @background-color-blue;
+}
+
+.site-list__item a {
+  text-decoration: none;
+  color: @text-color-reverse;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 170px;
+  right: 20px;
+  z-index: 2;
+  width: 23px;
+  height: 2px;
+  display: block;
+  cursor: pointer;
+  border: none;
+  background-color: @main-color;
+}
