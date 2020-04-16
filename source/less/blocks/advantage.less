@@ -34,22 +34,24 @@
   padding: 0;
   color: @title-color;
   background-color: @background-color-grey;
+
+  p {
+    color: @text-color;
+  }
+
+  .advantage__title {
+    margin: 0;
+    padding: 0;
+  }
+
+  .advantage__item {
+    padding: 33px 0;
+  }
 }
 
-.advantage__list p {
-  color: @text-color;
-}
-
-.advantage__list .advantage__title {
-  margin: 0;
-  padding: 0;
-}
-
-.advantage__list .advantage__item {
-  padding: 33px 0;
-}
-
-.advantage__item:nth-child(1),
-.advantage__item:nth-child(2) {
-  border-bottom: 1px solid @text-color-grey;
+.advantage__item {
+  &:nth-child(1),
+  &:nth-child(2) {
+    border-bottom: 1px solid #c4c4c4;
+  }
 }
