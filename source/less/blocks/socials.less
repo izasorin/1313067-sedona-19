@@ -1,5 +1,32 @@
 .socials__list {
+  display: flex;
+  justify-content: space-around;
   margin: 0;
-  padding: 0;
+  padding: 41px 84px 40px 85px;
   list-style: none;
+}
+
+.socials__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 6px;
+  width: 46px;
+  height: 48px;
+  background-color: @main-color;
+
+  svg {
+    fill: @text-color-reverse;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .socials__list {
+    margin: 0;
+    padding: 0;
+  }
 }

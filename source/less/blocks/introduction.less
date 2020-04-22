@@ -2,31 +2,177 @@
   width: 320px;
   margin: 0 auto;
   text-transform: uppercase;
+
+  &__picture-index {
+    position: relative;
+    min-height: 389px;
+    background-image: url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
+    background-color: #715f57;
+
+    .introduction__image {
+      padding-top: 90px;
+      padding-left: 20px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../img/bg-intro-triangle-mobile.svg");
+      width: 320px;
+      height: 26px;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &__picture-additional {
+    position: relative;
+    height: 158px;
+    background-image: url("../img/bg-back-mobile@1x.jpg");
+    background-position: 50% 90%;
+    background-color: #715f57;
+
+    .introduction__image {
+      padding-top: 52px;
+      padding-left: 46px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../img/bg-intro-triangle-mobile.svg");
+      width: 320px;
+      height: 26px;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &__title,
+  &__title-index {
+    width: 255px;
+    margin: 0 auto;
+    margin-top: 43px;
+    text-align: center;
+    font-size: @main-font-size;
+    line-height: 1.44;
+    font-weight: bold;
+  }
+
+  &__description,
+  &__description-index {
+    width: 270px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: @small-font-size;
+    line-height: 1.85;
+  }
 }
 
-.introduction__picture-index {
-  height: 389px;
-  background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-position: 50% 60%;
-  background-color: #715f57;
+@media (min-width: @tablet-width) {
+  .introduction {
+    width: @tablet-width;
+
+    &__title {
+      width: 428px;
+      margin: 0 auto;
+      margin-top: 76px;
+      margin-bottom: 38px;
+      font-size: @big-tablet-font-size;
+      line-height: @big-tablet-line-height;
+    }
+
+    &__description {
+      width: 428px;
+      margin: 0 auto;
+      margin-bottom: 70px;
+    }
+
+    &__title-index {
+      width: 490px;
+      margin: 0 auto;
+      margin-top: 43px;
+      margin-bottom: 30px;
+      font-size: @medium-font-size;
+      line-height: 1.23;
+    }
+
+    &__description-index {
+      width: 490px;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+
+    &__picture-index {
+      min-height: 518px;
+      background-image: url("../img/bg-back-tablet@1x.jpg");
+
+      .introduction__image {
+        padding: 77px 154px 91px 154px;
+      }
+
+      &::before {
+        background-image: url("../img/bg-intro-triangle-tablet.svg");
+        width: @tablet-width;
+        height: 57px;
+      }
+    }
+
+    &__picture-additional {
+      min-height: 290px;
+      background-image: url("../img/bg-back-tablet@1x.jpg");
+      background-position: 50% 100%;
+
+      .introduction__image {
+        padding: 94px 152px 116px 156px;
+      }
+
+      &::before {
+        background-image: url("../img/bg-intro-triangle-tablet.svg");
+        width: @tablet-width;
+        height: 57px;
+      }
+    }
+  }
 }
 
-.introduction__picture-additional {
-  height: 158px;
-  background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-position: 50% 90%;
-  background-color: #715f57;
-}
+@media (min-width: @desktop-width) {
+  .introduction {
+    width: @desktop-width;
 
-.introduction__title {
-  margin-top: 43px;
-  font-size: @main-font-size;
-  line-height: 1.44;
-  font-weight: bold;
-}
+    &__picture-index {
+      min-height: 518px;
+      background-image: url("../img/bg-back-desktop@1x.jpg");
 
-.introduction__description {
-  margin-bottom: 30px;
-  font-size: @small-font-size;
-  line-height: 1.85;
+      .introduction__image {
+        padding: 78px 390px 90px 390px;
+      }
+
+      &::before {
+        background-image: url("../img/bg-intro-triangle-desktop.svg");
+        width: @desktop-width;
+        height: 57px;
+      }
+    }
+
+    &__picture-additional {
+      min-height: 290px;
+      background-image: url("../img/bg-back-desktop@1x.jpg");
+      background-position: 50% 100%;
+
+      .introduction__image {
+        padding: 102px 370px 120px 370px;
+      }
+
+      &::before {
+        background-image: url("../img/bg-intro-triangle-desktop.svg");
+        width: @desktop-width;
+        height: 57px;
+      }
+    }
+  }
 }
