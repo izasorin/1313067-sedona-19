@@ -1,37 +1,108 @@
 .post {
-  padding: 22px 0;
-  border-top: 1px solid @text-color-grey;
-}
-
-.post__photo {
-  margin: 0;
-  padding: 0;
-}
-
-.post__title {
-  margin: 0;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
   padding-top: 22px;
-  font-size: @small-font-size;
-  line-height: 1.7;
-  font-weight: bold;
-  text-transform: uppercase;
+  border-top: 1px solid @text-color-grey;
+
+  .post__photo {
+    margin: 0;
+    padding: 0;
+
+    img {
+      display: block;
+    }
+  }
+
+  .post__wrapper {
+    padding: 20px 0;
+    color: @text-color;
+  }
+
+  .post__title {
+    margin: 0;
+    padding: 0;
+    font-size: @small-font-size;
+    line-height: 1.7;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .post__user-name {
+    margin: 0;
+    padding: 0;
+    font-size: @small-font-size;
+    line-height: 1.7;
+  }
+
+  .post__likes {
+    margin: 0;
+    margin-left: 37px;
+    padding: 0;
+    padding-top: 10px;
+    font-size: @small-font-size;
+    line-height: 1.7;
+    font-weight: bold;
+  }
 }
 
-.post__user-name {
-  margin: 0;
-  padding: 0;
-  padding-top: 19px;
-  font-size: @small-font-size;
-  line-height: 1.7;
-  color: @text-color;
+@media (min-width: @tablet-width) {
+  .post {
+    width: 50%;
+    border: none;
+    position: relative;
+    padding: 0;
+
+    .post__wrapper {
+      padding: 17px 0 17px 20px;
+      background-color: @background-color-grey-form;
+    }
+
+    .post__likes {
+      align-self: flex-end;
+      position: absolute;
+      bottom: 30px;
+      right: 35px;
+    }
+
+    &:nth-child(2n + 1) {
+      .post__wrapper {
+        background-color: #eaeaea;
+      }
+    }
+
+    &:first-child {
+      width: 100%;
+
+      .post__wrapper {
+        background-color: @background-color-grey-form;
+      }
+    }
+  }
 }
 
-.post__likes {
-  margin: 0;
-  padding: 0;
-  padding-top: 19px;
-  font-size: @small-font-size;
-  line-height: 1.7;
-  font-weight: bold;
+
+@media (min-width: @desktop-width) {
+  .post {
+    width: 33.3%;
+    position: relative;
+
+    .post__wrapper {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      color: @text-color-reverse;
+    }
+
+    &:nth-child(2n + 1) {
+      .post__wrapper {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    &:first-child {
+      width: 100%;
+    }
+  }
 }

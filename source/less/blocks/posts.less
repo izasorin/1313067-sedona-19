@@ -1,9 +1,31 @@
 .posts {
   border-bottom: 1px solid @text-color-grey;
+
+  .posts__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
 }
 
-.posts__list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+@media (min-width: @tablet-width) {
+  .posts {
+    margin: 0 auto;
+    width: 648px;
+    border: none;
+
+    .posts__list {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .posts {
+    width: @desktop-width;
+  }
 }

@@ -1,5 +1,20 @@
 .advantages__list {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__list {
+    width: @tablet-width;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__list {
+    width: @desktop-width;
+  }
 }
