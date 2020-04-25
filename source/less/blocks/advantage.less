@@ -4,7 +4,7 @@
   text-transform: uppercase;
   color: @text-color-reverse;
 
-  &__wrapper {
+  .advantage__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,7 +13,7 @@
     background-color: @background-color-blue;
   }
 
-  &__title {
+  .advantage__title {
     margin: 0;
     padding: 0;
     padding-top: 38px;
@@ -22,13 +22,13 @@
     font-weight: bold;
   }
 
-  &__number {
+  .advantage__number {
     position: relative;
     font-size: @small-font-size;
     line-height: 1.5;
   }
 
-  &__description {
+  .advantage__description {
     margin: 0;
     padding: 0 29px 40px 29px;
     text-align: center;
@@ -36,7 +36,7 @@
     line-height: 1.5;
   }
 
-  &__picture {
+  .advantage__picture {
     img {
       display: block;
       background-color: #ebbea7;
@@ -87,7 +87,11 @@
   .advantage {
     flex-direction: row;
 
-    &__title {
+    .advantage__wrapper {
+      min-width: 260px;
+    }
+
+    .advantage__title {
       width: 155px;
       padding-top: 46px;
       text-align: center;
@@ -95,7 +99,7 @@
       line-height: 1.23;
     }
 
-    &__description {
+    .advantage__description {
       width: 162px;
       padding-top: 5px;
       padding-bottom: 45px;
@@ -126,7 +130,11 @@
 
 @media (min-width: @desktop-width) {
   .advantage {
-    &__description {
+    .advantage__wrapper {
+      min-width: 400px;
+    }
+
+    .advantage__description {
       width: 285px;
     }
   }
