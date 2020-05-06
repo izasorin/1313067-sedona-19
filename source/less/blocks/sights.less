@@ -1,0 +1,139 @@
+.sights {
+  legend {
+    padding-top: 24px;
+    padding-bottom: 30px;
+  }
+
+  .sights__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .sights__group {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 5px;
+
+      .sights__label {
+        position: relative;
+        padding-left: 90px;
+        padding-bottom: 55px;
+        font-size: @main-font-size;
+        line-height: @big-line-height;
+        font-weight: bold;
+        cursor: pointer;
+        text-align: left;
+      }
+
+      input[type="checkbox"]:checked,
+      input[type="checkbox"]:not(:checked) {
+        position: absolute;
+        left: -9999px;
+      }
+
+      .sights__input--checkbox + label::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        width: 46px;
+        height: 46px;
+        background-color: @background-color-grey-form;
+        border-radius: 10%;
+      }
+
+      .sights__input--checkbox:hover + label::before {
+        background-color: @background-color-grey-form-hover;
+      }
+
+      .sights__input--checkbox:active + label::before {
+        background-color: @background-color-grey-form-active;
+      }
+
+      .sights__input--checkbox:checked + label::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        width: 46px;
+        height: 46px;
+        background-color: @background-color-grey-form;
+        border-radius: 10%;
+        background-image: url("../img/icon-tick.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .sights__input--checkbox:checked:hover + label::before {
+        background-color: @background-color-grey-form-hover;
+      }
+
+      .sights__input--checkbox:checked:active + label::before {
+        background-color: @background-color-grey-form-active;
+        /* Галочку хотел сделать позже через свг спрайт */
+      }
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .sights {
+    legend {
+      position: relative;
+      padding-top: 30px;
+      padding-bottom: 55px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50px;
+        left: -185px;
+        width: 125px;
+        height: 1px;
+        background-color: #e5e5e5;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50px;
+        right: -185px;
+        width: 125px;
+        height: 1px;
+        background-color: #e5e5e5;
+      }
+    }
+
+    .sights__wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 0 10%;
+
+      .sights__group {
+        margin: 0;
+        padding: 0;
+        margin-left: 22px;
+        width: 45%;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .sights {
+    .sights__wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 0;
+
+      .sights__group {
+        margin: 0;
+        padding: 0;
+        width: 25%;
+      }
+    }
+  }
+}

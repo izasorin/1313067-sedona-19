@@ -8,7 +8,7 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -34,7 +34,104 @@
       </nav>
     </header>
     <main class="page-main">
-      <!-- Пока ничего не делал в рамках первого задания раздела 2 -->
+      <div class="introduction">
+        <div class="introduction__picture">
+          <img src="img/text-sedona.svg" width="229" height="39" alt="Welcome to the gorgeous Sedona">
+        </div>
+          <h1 class="introduction__title">Оставьте свой отзыв</h1>
+          <p class="introduction__description" >Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+      </div>
+      <section>
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <form class="feedback" action="https://echo.htmlacademy.ru" method="post">
+          <div class="feedback__container">
+            <fieldset class="feedback__item represent">
+              <legend class="feedback__title">Представьтесь:</legend>
+              <div class="represent__wrapper">
+                <div class="represent__group">
+                  <label class="represent__label" for="firstname-field">ИМЯ*:</label>
+                  <input class="represent__input" name="firstname" id="firstname-field" type="text" placeholder="Петр" required>
+                </div>
+                <div class="represent__group">
+                  <label class="represent__label" for="surname-field">ФАМИЛИЯ*:</label>
+                  <input class="represent__input" name="surname" id="surname-field" type="text" placeholder="Иванов" required>
+                </div>
+                <div class="represent__group">
+                  <label class="represent__label" for="midname-field">Отчество:</label>
+                  <input class="represent__input" name="midname" id="midname-field" type="text" placeholder="Александрович">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="feedback__container">
+            <fieldset class="feedback__item contacts">
+              <legend>Контактная информация:</legend>
+              <div class="contacts__wrapper">
+                <label class="contacts__label" for="phone-field">Контактный телефон*:</label>
+                <input class="contacts__input" name="phone" id="phone-field" type="tel" placeholder="Введите телефон" required pattern="[0-9]{1}-[0-9]{3}-[0-9]{7}">
+                <label class="contacts__label" for="email-field">Электронная почта*:</label>
+                <input class="contacts__input" name="email" id="email-field" type="email" placeholder="Введите e-mail" required pattern="[a-zA-Z]{2,}@[a-zA-Z]{2,}.[a-zA-Z]{2,}">
+              </div>
+            </fieldset>
+          </div>
+          <div class="feedback__container">
+            <fieldset class="feedback__item impressions">
+              <legend>Ваше общее впечатление:</legend>
+              <div class="impressions__wrapper">
+                <div class="impressions__group">
+                  <input class="impressions__input impressions__input--radio" type="radio" name="impressions" id="positive" value="positive" checked>
+                  <label class="impressions__label impressions__label--radio" for="positive">Скорее положительное</label>
+                </div>
+                <div class="impressions__group">
+                  <input class="impressions__input impressions__input--radio" type="radio" name="impressions" id="negative" value="negative">
+                  <label class="impressions__label impressions__label--radio" for="negative">Скорее отрицательное</label>
+                </div>
+                <div class="impressions__group">
+                  <input class="impressions__input impressions__input--radio" type="radio" name="impressions" id="not-sure" value="not-sure">
+                  <label class="impressions__label impressions__label--radio" for="not-sure">Затрудняюсь ответить</label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="feedback__container">
+            <fieldset class="feedback__item sights">
+              <legend>Посещенные<br>достопримечательности</legend>
+              <div class="sights__wrapper">
+                <div class="sights__group">
+                  <input class="sights__input sights__input--checkbox" type="checkbox" name="sight-bridge" id="sight-bridge" checked>
+                  <label class="sights__label sights__label--checkbox" for="sight-bridge">Мост Дьявола</label>
+                </div>
+                <div class="sights__group">
+                  <input class="sights__input sights__input--checkbox" type="checkbox" name="sight-mountain" id="sight-mountain" checked>
+                  <label class="sights__label sights__label--checkbox" for="sight-mountain">Гора-Колокол</label>
+                </div>
+                <div class="sights__group">
+                  <input class="sights_input sights__input--checkbox" type="checkbox" name="sight-park" id="sight-park" checked>
+                  <label class="sights__label sights__label--checkbox" for="sight-park">Слайд-парк</label>
+                </div>
+                <div class="sights__group">
+                  <input class="sights__input sights__input--checkbox" type="checkbox" name="sight-rocks" id="sight-rocks">
+                  <label class="sights__label sights__label--checkbox" for="sight-rocks">Красные скалы</label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="feedback__container">
+            <fieldset class="feedback__item emotions">
+              <legend>Опишите свои эмоции:</legend>
+              <div class="emotions__wrapper">
+                <textarea class="emotions__textarea" name="description" id="description"  placeholder="Опишите подробно все свои восторги" ></textarea>
+              </div>
+            </fieldset>
+          </div>
+          <div class="feedback__container">
+            <fieldset class="feedback__item feedback__item--submit">
+              <input class="feedback__button button" type="submit" value="ОТПРАВИТЬ ОТЗЫВ">
+              <p class="feedback__footnote">* – обязательные поля</p>
+            </fieldset>
+          </div>
+        </form>
+      </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
@@ -78,5 +175,28 @@
         </div>
       </div>
     </footer>
+    <section class="modal visually-hidden">
+      <h2>Ваш отзыв отправлен!</h2>
+      <div>
+        <p>
+          Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.
+        </p>
+      </div>
+      <div>
+        <a href="#">ЗАКРЫТЬ ОКНО</a>
+      </div>
+    </section>
+    <section class="modal visually-hidden">
+      <div>
+        <h2>ЧТО-ТО ПОШЛО НЕ ТАК!</h2>
+        <div>
+          <p>
+            Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+          </p>
+        </div>
+        <a href="#">ОК</a>
+      </div>
+    </section>
+    <script src="js/app.js"></script>
   </body>
 </html>
