@@ -37,18 +37,16 @@
 
 @media (min-width: @tablet-width) {
   .site-list {
-    min-width: @tablet-width;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: space-around;
 
     &__item:nth-child(2) {
-      margin-right: 144px;
+      margin-right: 18.75%;
     }
 
     a {
-      min-width: 156px;
+      min-width: 153px;
       padding: 15px 0;
       font-size: @small-font-size;
       line-height: @big-line-height;
@@ -74,10 +72,6 @@
 @media (min-width: @desktop-width) {
   .site-list {
     min-width: @desktop-width;
-
-    &__item:nth-child(2) {
-      margin-right: 244px;
-    }
 
     a {
       min-width: 239px;

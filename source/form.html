@@ -28,7 +28,7 @@
             </li>
           </ul>
         </div>
-        <a class="main-nav__logo">
+        <a class="main-nav__logo" href="index.html">
           <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип сайта Седона">
         </a>
       </nav>
@@ -39,7 +39,7 @@
           <img src="img/text-sedona.svg" width="229" height="39" alt="Welcome to the gorgeous Sedona">
         </div>
           <h1 class="introduction__title">Оставьте свой отзыв</h1>
-          <p class="introduction__description" >Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+          <p class="introduction__description" >Помогите&nbsp;нашим&nbsp;отелям&nbsp;стать&nbsp;лучше! оставьте&nbsp;отзыв&nbsp;о&nbsp;них, а&nbsp;также&nbsp;о посещенных&nbsp;вами достопримечательностях</p>
       </div>
       <section>
         <h2 class="visually-hidden">Форма обратной связи</h2>
@@ -67,10 +67,14 @@
             <fieldset class="feedback__item contacts">
               <legend>Контактная информация:</legend>
               <div class="contacts__wrapper">
-                <label class="contacts__label" for="phone-field">Контактный телефон*:</label>
-                <input class="contacts__input" name="phone" id="phone-field" type="tel" placeholder="Введите телефон" required pattern="[0-9]{1}-[0-9]{3}-[0-9]{7}">
-                <label class="contacts__label" for="email-field">Электронная почта*:</label>
-                <input class="contacts__input" name="email" id="email-field" type="email" placeholder="Введите e-mail" required pattern="[a-zA-Z]{2,}@[a-zA-Z]{2,}.[a-zA-Z]{2,}">
+                <div class="contacts__group">
+                  <label class="contacts__label contacts__label--phone" for="phone-field"><span class="contacts__label--addition">Контактный</span> телефон*:</label>
+                  <input class="contacts__input contacts__input--phone" name="phone" id="phone-field" type="tel" placeholder="Введите телефон" required pattern="(\+?\d[- .]*){7,13}">
+                </div>
+                <div class="contacts__group">
+                  <label class="contacts__label contacts__label--email" for="email-field">Электронная&nbsp;почта*:</label>
+                  <input class="contacts__input contacts__input--email" name="email" id="email-field" type="email" placeholder="Введите e-mail" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}">
+                </div>
               </div>
             </fieldset>
           </div>

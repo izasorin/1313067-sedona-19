@@ -1,85 +1,73 @@
-.represent {
-  legend {
-    padding-top: 24px;
-    padding-bottom: 22px;
+.represent__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.represent__label {
+  text-transform: uppercase;
+  margin-right: 14px;
+}
+
+.represent__group {
+  display: flex;
+  align-items: baseline;
+
+  &:last-child {
+    input {
+      margin: 0;
+    }
+  }
+}
+
+.represent__input {
+  flex-grow: 1;
+  margin-bottom: 20px;
+  padding-left: 18px;
+  height: 58px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: @main-font-size;
+  font-weight: bold;
+  color: @title-color;
+  background-color: @background-color-grey-form;
+  border: 4px solid @background-color-grey-form;
+
+  &::placeholder {
+    font-size: @main-font-size;
+    font-weight: bold;
+    color: @title-color;
   }
 
-  .represent__wrapper {
-    display: flex;
-    flex-direction: column;
+  &:hover {
+    background-color: @background-color-grey-form-hover;
+    border: 4px solid @background-color-grey-form-hover;
+  }
 
-    .represent__group {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin-bottom: 5px;
-
-      .represent__label {
-        text-transform: uppercase;
-        padding-right: 14px;
-        padding-left: 20px;
-        padding-bottom: 15px;
-      }
-
-      .represent__input {
-        flex-grow: 1;
-        margin-bottom: 20px;
-        margin-right: 20px;
-        padding-left: 18px;
-        height: 58px;
-        box-sizing: border-box;
-        font-family: "PT Sans", "Arial", sans-serif;
-        font-size: @main-font-size;
-        font-weight: bold;
-        color: @title-color;
-        background-color: @background-color-grey-form;
-        border: 4px solid @background-color-grey-form;
-
-        &::placeholder {
-          font-size: @main-font-size;
-          font-weight: bold;
-          color: @title-color;
-        }
-
-        &:hover {
-          background-color: @background-color-grey-form-hover;
-          border: 4px solid @background-color-grey-form-hover;
-        }
-
-        &:focus {
-          font-size: @main-font-size;
-          font-weight: bold;
-          background-color: @text-color-reverse;
-          border: 4px solid @text-color-grey;
-          outline: none;
-        }
-      }
-    }
+  &:focus {
+    font-size: @main-font-size;
+    font-weight: bold;
+    background-color: @text-color-reverse;
+    border: 4px solid @text-color-grey;
+    outline: none;
   }
 }
 
 @media (min-width: @tablet-width) {
   .represent {
+    margin-right: 15%;
+    margin-left: 60px;
+
     legend {
       text-align: left;
-      padding: 0;
-      padding-bottom: 63px;
     }
+  }
+}
 
-    .represent__wrapper {
-      .represent__group {
-        .represent__label {
-          padding: 0;
-          padding-right: 14px;
-          padding-bottom: 15px;
-        }
-
-        .represent__input {
-          flex-grow: 1;
-          margin: 0;
-          margin-bottom: 20px;
-        }
-      }
-    }
+@media (min-width: @desktop-width) {
+  .represent {
+    margin-top: 0;
+    margin-right: 20%;
+    margin-left: 79px;
   }
 }
