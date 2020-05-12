@@ -17,18 +17,31 @@
     min-height: 58px;
     min-width: 280px;
     font-size: @medium-font-size;
-    line-height: 1.23;
+    line-height: @big-line-height;
     font-weight: bold;
     text-decoration: none;
     color: @text-color-reverse;
     background-color: @background-color-blue;
+
+    &:hover {
+      background-color: @main-color-hover;
+    }
+
+    &:active {
+      background-color: @main-color-active;
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    &:disabled {
+      background-color: #e5e5e5;
+    }
   }
 
   .booking__title {
     margin: 0;
     padding: 33px;
     font-size: @medium-font-size;
-    line-height: 1.23;
+    line-height: @big-line-height;
   }
 
   .booking__description {
@@ -38,7 +51,7 @@
     padding: 0;
     padding-bottom: 40px;
     font-size: @small-font-size;
-    line-height: 1.71;
+    line-height: @medium-line-height;
     color: @text-color;
   }
 }
@@ -55,7 +68,6 @@
       padding: 0;
       padding-top: 57px;
       font-size: @big-tablet-font-size;
-      line-height: @big-tablet-line-height;
     }
 
     .booking__description {
@@ -63,8 +75,6 @@
       text-align: center;
       margin: 0;
       padding: 47px 0;
-      font-size: @small-font-size;
-      line-height: 1.71;
       color: @text-color;
     }
   }

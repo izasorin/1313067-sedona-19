@@ -16,16 +16,22 @@
   .advantage__title {
     margin: 0;
     padding: 0;
-    padding-top: 38px;
+    margin-top: 45px;
     font-size: @main-font-size;
-    line-height: 1.44;
+    line-height: @big-line-height;
     font-weight: bold;
+  }
+
+  &:nth-of-type(1) {
+    .advantage__title {
+      margin-top: 80px;
+    }
   }
 
   .advantage__number {
     position: relative;
     font-size: @small-font-size;
-    line-height: 1.5;
+    line-height: @small-line-height;
   }
 
   .advantage__description {
@@ -33,12 +39,13 @@
     padding: 0 29px 40px 29px;
     text-align: center;
     font-size: @small-font-size;
-    line-height: 1.5;
+    line-height: @small-line-height;
   }
 
   .advantage__picture {
     img {
       display: block;
+      width: 100%;
       background-color: #ebbea7;
     }
   }
@@ -48,6 +55,7 @@
   display: flex;
   flex-direction: column;
   list-style: none;
+  width: 100%;
   margin: 0;
   padding: 0;
   color: @title-color;
@@ -83,26 +91,56 @@
   }
 }
 
+@media (min-width: 321px) {
+  .advantage:nth-of-type(1) {
+    .advantage__title {
+      margin-top: 45px;
+    }
+  }
+}
+
 @media (min-width: @tablet-width) {
   .advantage {
     flex-direction: row;
 
     .advantage__wrapper {
-      min-width: 260px;
+      min-width: 33.3%;
+    }
+
+    .advantage__item {
+      min-height: 256px;
+      box-sizing: border-box;
+      margin: 0 auto;
     }
 
     .advantage__title {
       width: 155px;
-      padding-top: 46px;
       text-align: center;
       font-size: @medium-font-size;
-      line-height: 1.23;
+      line-height: @big-line-height;
+      margin: 0;
+      padding: 0;
+      padding-top: 46px;
+    }
+
+    &:nth-of-type(1) {
+      .advantage__title {
+        margin: 0;
+      }
     }
 
     .advantage__description {
       width: 162px;
-      padding-top: 5px;
-      padding-bottom: 45px;
+      padding: 0;
+    }
+  }
+
+  .advantage__picture {
+    width: 66.66%;
+
+    img {
+      height: 256px;
+      width: 100%;
     }
   }
 
@@ -116,14 +154,20 @@
   .advantage__list {
     flex-direction: row;
     justify-content: space-around;
-  }
 
-  .advantage__item {
-    min-width: 256px;
+    .advantage__item {
+      min-width: 33.3%;
+      height: 256px;
+      padding: 0;
 
-    &:nth-child(1)::after,
-    &:nth-child(2)::after {
-      display: none;
+      &:nth-child(1)::after,
+      &:nth-child(2)::after {
+        display: none;
+      }
+
+      .advantage__title {
+        padding: 0;
+      }
     }
   }
 }
