@@ -3,51 +3,51 @@
   flex-direction: column;
   text-transform: uppercase;
   color: @text-color-reverse;
+}
 
-  .advantage__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    background-color: @background-color-blue;
-  }
+.advantage__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  background-color: @background-color-blue;
+}
 
+.advantage__title {
+  margin: 0;
+  padding: 0;
+  margin-top: 45px;
+  font-size: @main-font-size;
+  line-height: @big-line-height;
+  font-weight: bold;
+}
+
+&:nth-of-type(1) {
   .advantage__title {
-    margin: 0;
-    padding: 0;
-    margin-top: 45px;
-    font-size: @main-font-size;
-    line-height: @big-line-height;
-    font-weight: bold;
+    margin-top: 80px;
   }
+}
 
-  &:nth-of-type(1) {
-    .advantage__title {
-      margin-top: 80px;
-    }
-  }
+.advantage__number {
+  position: relative;
+  font-size: @small-font-size;
+  line-height: @small-line-height;
+}
 
-  .advantage__number {
-    position: relative;
-    font-size: @small-font-size;
-    line-height: @small-line-height;
-  }
+.advantage__description {
+  margin: 0;
+  padding: 0 29px 40px 29px;
+  text-align: center;
+  font-size: @small-font-size;
+  line-height: @small-line-height;
+}
 
-  .advantage__description {
-    margin: 0;
-    padding: 0 29px 40px 29px;
-    text-align: center;
-    font-size: @small-font-size;
-    line-height: @small-line-height;
-  }
-
-  .advantage__picture {
-    img {
-      display: block;
-      width: 100%;
-      background-color: #ebbea7;
-    }
+.advantage__picture {
+  img {
+    display: block;
+    max-width: 100%;
+    background-color: #ebbea7;
   }
 }
 
@@ -103,10 +103,6 @@
   .advantage {
     flex-direction: row;
 
-    .advantage__wrapper {
-      min-width: 33.3%;
-    }
-
     .advantage__item {
       min-height: 256px;
       box-sizing: border-box;
@@ -135,12 +131,16 @@
     }
   }
 
+  .advantage__wrapper {
+    min-width: 33.3%;
+  }
+
   .advantage__picture {
     width: 66.66%;
 
     img {
       height: 256px;
-      width: 100%;
+      max-width: 100%;
     }
   }
 
@@ -185,5 +185,14 @@
 
   .advantage__item {
     min-width: 400px;
+  }
+
+  .advantage__picture {
+    width: 66.66%;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
   }
 }

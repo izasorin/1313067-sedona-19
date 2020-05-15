@@ -5,10 +5,16 @@
 
   .introduction__picture {
     position: relative;
-    height: 158px;
     background-image: url("../img/bg-back-mobile@1x.jpg");
-    background-position: 50% 90%;
+    height: 158px;
+    background-position: center 100%;
+    background-size: auto 389px;
+    background-repeat: no-repeat;
     background-color: #715f57;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-mobile@2x.jpg");
+    }
 
     img {
       position: absolute;
@@ -29,12 +35,9 @@
     }
 
     &--index {
-      position: relative;
       min-height: 389px;
-      background-image: url("../img/bg-back-mobile@1x.jpg");
-      background-repeat: no-repeat;
-      background-position: 50% 60%;
-      background-color: #715f57;
+      background-size: auto 389px;
+      background-position: center 0;
 
       &::before {
         content: "";
@@ -94,7 +97,11 @@
     .introduction__picture {
       min-height: 290px;
       background-image: url("../img/bg-back-desktop@1x.jpg");
-      background-position: 50% 100%;
+      background-size: 1200px auto;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/bg-back-desktop@2x.jpg");
+      }
 
       img {
         width: 460px;
@@ -108,6 +115,7 @@
         min-height: 518px;
         background-image: url("../img/bg-back-desktop@1x.jpg");
         background-position: 50% 100%;
+        background-size: auto 518px;
 
         img {
           width: 460px;
@@ -157,8 +165,6 @@
 
     .introduction__picture {
       min-height: 300px;
-      background-image: url("../img/bg-back-desktop@1x.jpg");
-      background-position: 50% 100%;
 
       &::before {
         top: 243px;
