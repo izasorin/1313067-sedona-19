@@ -64,8 +64,13 @@ input[type="checkbox"]:not(:checked) {
   background-color: @background-color-grey-form-hover;
 }
 
-.sights__input--checkbox:checked:active + label::before {
+/*.sights__input--checkbox:checked:active + label::before {
   background-color: @background-color-grey-form-active;
+}*/
+
+.sights__input--checkbox:checked:active + label::before {
+  background-color: rgba(50, 50, 50, 0.5);
+  opacity: 0.5;
 }
 
 @media (min-width: @tablet-width) {
@@ -107,7 +112,7 @@ input[type="checkbox"]:not(:checked) {
     padding: 0;
 
     &:not(:nth-child(4n + 4)) {
-      margin-right: 6.25%;
+      margin-right: 6%;
     }
   }
 }

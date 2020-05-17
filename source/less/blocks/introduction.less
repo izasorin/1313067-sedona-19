@@ -54,7 +54,8 @@
         position: absolute;
         background-image: url("../img/bg-triangle.svg");
         background-repeat: no-repeat;
-        min-width: 320px;
+        background-size: cover;
+        width: 100%;
         height: 37px;
         bottom: -265px;
         right: 0;
@@ -66,6 +67,7 @@
 .introduction__title {
   margin: 0 auto;
   margin-top: 43px;
+  max-width: 280px;
   text-align: center;
   font-size: @main-font-size;
   line-height: @big-line-height;
@@ -73,7 +75,7 @@
 }
 
 .introduction__description {
-  width: auto;
+  max-width: 280px;
   margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -82,13 +84,6 @@
   line-height: @medium-line-height;
 }
 
-@media (min-width: 321px) {
-  .introduction {
-    .introduction__picture--index::after {
-      content: none;
-    }
-  }
-}
 
 @media (min-width: @tablet-width) {
   .introduction {
@@ -133,6 +128,7 @@
   }
 
   .introduction__title {
+    max-width: 439px;
     margin: 0 auto;
     margin-top: 76px;
     margin-bottom: 38px;
@@ -206,216 +202,3 @@
     }
   }
 }
-
-/* .introduction {
-  width: auto;
-  margin: 0 auto;
-  text-transform: uppercase;
-
-  .introduction__picture {
-    position: relative;
-    height: 158px;
-    background-image: url("../img/bg-back-desktop@1x.jpg");
-    background-position: 45% 95%;
-    background-color: #715f57;
-
-    img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      background-image: url("../img/bg-intro-triangle-desktop.svg");
-      background-repeat: no-repeat;
-      min-width: 100%;
-      height: 26px;
-      bottom: 0;
-      right: 0px;
-    }
-
-    &--index {
-      position: relative;
-      min-height: 389px;
-      background-image: url("../img/bg-back-desktop@1x.jpg");
-      background-repeat: no-repeat;
-      background-position: 50% 30%;
-      background-color: #715f57;
-
-      &::before {
-        content: "";
-        position: absolute;
-        background-image: url("../img/bg-intro-triangle-desktop.svg");
-        background-repeat: no-repeat;
-        min-width: 100%;
-        height: 26px;
-        bottom: 0;
-        right: 0px;
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        background-image: url("../img/bg-triangle.svg");
-        background-repeat: no-repeat;
-        min-width: 320px;
-        height: 37px;
-        bottom: -265px;
-        right: 0;
-      }
-    }
-  }
-
-  .introduction__title {
-    width: 255px;
-    margin: 0 auto;
-    margin-top: 43px;
-    text-align: center;
-    font-size: @main-font-size;
-    line-height: @big-line-height;
-    font-weight: bold;
-  }
-
-  .introduction__description {
-    width: 270px;
-    margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    text-align: center;
-    font-size: @small-font-size;
-    line-height: @medium-line-height;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .introduction {
-    width: 100%;
-
-    .introduction__title {
-      width: 428px;
-      margin: 0 auto;
-      margin-top: 76px;
-      margin-bottom: 38px;
-      font-size: @big-tablet-font-size;
-
-      &--index {
-        width: 490px;
-        margin: 0 auto;
-        margin-top: 43px;
-        margin-bottom: 30px;
-        font-size: @medium-font-size;
-      }
-    }
-
-    .introduction__description {
-      width: 435px;
-      margin: 0 auto;
-      margin-bottom: 70px;
-
-      &--index {
-        width: 490px;
-        margin: 0 auto;
-        margin-bottom: 50px;
-      }
-    }
-
-    img {
-      position: absolute;
-      width: 460px;
-      height: 350px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .introduction__picture {
-      height: 518px;
-      min-height: 290px;
-      background-image: url("../img/bg-back-tablet@1x.jpg");
-      background-position: 50% 100%;
-
-
-       &::before {
-        background-image: url("../img/bg-intro-triangle-tablet.svg");
-        width: @tablet-width;
-        height: 57px;
-      }
-
-      &::after {
-        content: none;
-      }
-
-      &--index {
-        min-height: 518px;
-        background-image: url("../img/bg-back-tablet@1x.jpg");
-
-        &::before {
-          background-image: url("../img/bg-intro-triangle-tablet.svg");
-          width: @tablet-width;
-          height: 57px;
-        }
-      }
-    }
-  }
-
-
-@media (min-width: @desktop-width) {
-  .introduction {
-    width: @desktop-width;
-
-    .introduction__title {
-      width: 428px;
-      margin: 0 auto;
-      margin-top: 76px;
-      margin-bottom: 38px;
-      font-size: @big-tablet-font-size;
-
-      &--index {
-        width: 490px;
-        margin: 0 auto;
-        margin-top: 43px;
-        margin-bottom: 30px;
-        font-size: @medium-font-size;
-      }
-    }
-
-    .introduction__description {
-      width: 428px;
-      margin: 0 auto;
-      margin-bottom: 70px;
-
-      &--index {
-        width: 490px;
-        margin: 0 auto;
-        margin-bottom: 50px;
-      }
-    }
-
-    .introduction__picture {
-      min-height: 290px;
-      background-image: url("../img/bg-back-desktop@1x.jpg");
-      background-position: 50% 100%;
-
-      &::before {
-        background-image: url("../img/bg-intro-triangle-desktop.svg");
-        width: @desktop-width;
-        height: 57px;
-      }
-
-      &--index {
-        min-height: 518px;
-        background-image: url("../img/bg-back-desktop@1x.jpg");
-
-        &::before {
-          background-image: url("../img/bg-intro-triangle-desktop.svg");
-          width: @desktop-width;
-          height: 57px;
-        }
-      }
-    }
-  }
-}
-*/

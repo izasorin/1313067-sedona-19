@@ -14,6 +14,7 @@
   width: 46px;
   height: 48px;
   background-color: @main-color;
+  cursor: pointer;
 
   svg {
     fill: @text-color-reverse;
@@ -21,6 +22,18 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  &:hover {
+    background-color: @main-color-hover;
+  }
+
+  &:active {
+    background-color: @main-color-active;
+  }
+
+  &:active svg {
+    fill: rgba(255, 255, 255, 0.3);
   }
 }
 

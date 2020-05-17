@@ -18,6 +18,14 @@
   text-decoration: none;
   font-size: @medium-font-size;
   color: @title-color;
+
+  &:hover {
+    color: @background-color-blue;
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 .page-footer__copyright {
@@ -30,11 +38,29 @@
     text-transform: uppercase;
     text-decoration: none;
     color: @text-color;
+
+    &:hover {
+      color: @background-color-blue;
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
+
+    &:hover svg {
+      fill: @background-color-blue;
+    }
+
+    &:active svg {
+      fill: rgba(0, 0, 0, 0.3);
+    }
   }
 
   svg {
     position: absolute;
-    left: 100px;
+    top: -13px;
+    left: 95px;
+    fill: #000000;
   }
 }
 
@@ -55,17 +81,17 @@
 
   .page-footer__hashtag {
     padding: 0;
-    padding-right: 112px;
+    margin-right: 112px;
   }
 
   .page-footer__copyright {
     a {
       padding: 0;
-      padding-left: 120px;
+      margin-left: 120px;
     }
 
     svg {
-      left: 220px;
+      left: 95px;
     }
   }
 }
@@ -87,17 +113,17 @@
 
   .page-footer__hashtag {
     padding: 0;
-    padding-right: 269px;
+    margin-right: 269px;
   }
 
   .page-footer__copyright {
     a {
       padding: 0;
-      padding-left: 276px;
+      margin-left: 276px;
     }
 
     svg {
-      left: 376px;
+      right: 0;
     }
   }
 }
