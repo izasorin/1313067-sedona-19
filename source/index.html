@@ -83,19 +83,19 @@
             <li class="advantages__item features">
                 <ul class="features__list">
                   <li class="features__item features__item--house">
-                    <h3 class="features__title"><svg class="features__icon features__icon--house" width="37" height="36" role="presentation"><use xlink:href="img/sprite.svg#icon-house"></use></svg>Жилье</h3>
+                    <h3 class="features__title"><svg class="features__icon features__icon--house" width="37" height="36" ><use xlink:href="img/sprite.svg#icon-house"></use></svg>Жилье</h3>
                     <p class="features__description">
                       Рекомендуем пожить в настоящем мотеле, все как в кино!
                     </p>
                   </li>
                   <li class="features__item features__item--souvenirs">
-                    <h3 class="features__title"><svg class="features__icon features__icon--souvenirs" width="32" height="38" role="presentation"><use xlink:href="img/sprite.svg#icon-gift"></use></svg>Сувениры</h3>
+                    <h3 class="features__title"><svg class="features__icon features__icon--souvenirs" width="32" height="38"><use xlink:href="img/sprite.svg#icon-gift"></use></svg>Сувениры</h3>
                     <p class="features__description">
                       Не только китайского, но и местного производства!
                     </p>
                   </li>
                   <li class="features__item features__item--food">
-                    <h3 class="features__title"><svg class="features__icon features__icon--food" width="40" height="35" role="presentation"><use xlink:href="img/sprite.svg#icon-burger"></use></svg>Еда</h3>
+                    <h3 class="features__title"><svg class="features__icon features__icon--food" width="40" height="35"><use xlink:href="img/sprite.svg#icon-burger"></use></svg>Еда</h3>
                     <p class="features__description">
                       Всегда заказывайте фирменный бургер, вы&nbsp;не разочаруетесь!
                     </p>
@@ -163,7 +163,18 @@
         </div>
       </div>
       <div class="map">
-        <!-- Поставил временный-->
+        <div class="map__wrapper">
+          <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+            <img src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" alt="Карта региона Sedona">
+          </picture>
+        </div>
+        <!-- Поставил временный
         <div class="map__wrapper">
           <iframe
             src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae051af885f82047808de816b18ec93910052dc383627e7951ea928b29f938e28&amp;source=constructor"
@@ -171,7 +182,7 @@
             height="350"
             frameborder="0"
           ></iframe>
-        </div>
+        </div>-->
       </div>
     </main>
     <footer class="page-footer">

@@ -1,8 +1,44 @@
 /* Стили для карты */
+.map__wrapper {
+  position: relative;
+  margin: 0 auto;
+
+  img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    left: 45%;
+    top: 45%;
+    background-image: url("../img/icon-map-marker.svg");
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .map__wrapper {
+    &::after {
+      content: "";
+      left: 48%;
+    }
+  }
+}
 
 @media (min-width: @desktop-width) {
   .map__wrapper {
     max-width: 1200px;
-    margin: 0 auto;
+
+    &::after {
+      content: "";
+      left: 49%;
+    }
   }
 }
