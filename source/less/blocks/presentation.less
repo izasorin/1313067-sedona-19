@@ -1,51 +1,226 @@
 .presentation {
   padding-top: 39px;
+}
 
-  .presentation__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.presentation__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .presentation__title {
-    margin: 0;
-    padding: 0;
-    padding-bottom: 30px;
-    font-size: @main-font-size;
-    line-height: @big-line-height;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
+.presentation__title {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 30px;
+  font-size: @main-font-size;
+  line-height: @big-line-height;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
-  .presentation__description {
-    width: 236px;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    font-size: @small-font-size;
-    line-height: @medium-line-height;
-    text-transform: uppercase;
-  }
+.presentation__description {
+  width: 236px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: @small-font-size;
+  line-height: @medium-line-height;
+  text-transform: uppercase;
+}
 
-  .presentation__content {
-    padding-top: 40px;
+.presentation__content {
+  position: relative;
+  padding-top: 40px;
+  width: 100%;
+
+  img {
+    width: 100%;
+    height: 201px;
+    display: block;
+    object-fit: cover;
   }
+}
+
+.presentation__timeline {
+  position: absolute;
+  left: 6.25%;
+  bottom: 0;
+  width: 87.5%;
+  height: 45px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.presentation__bar {
+  position: absolute;
+  left: 8%;
+  bottom: 50%;
+  width: 84%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.presentation__toggle {
+  position: absolute;
+  left: 20%;
+  top: 17px;
+  width: 11px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.presentation__controls {
+  position: absolute;
+  left: 6.25%;
+  width: 87.5%;
+  height: 66px;
+  background-color: @background-color-grey-form;
+}
+
+.presentation__button {
+  position: absolute;
+  top: 20px;
+  fill: #5c6870;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.presentation__button--replay {
+  left: 15px;
+}
+
+.presentation__button--subtitles {
+  right: 65px;
+}
+
+.presentation__button--fullscreen {
+  right: 15px;
 }
 
 @media (min-width: @tablet-width) {
   .presentation {
     padding-top: 68px;
+  }
 
-    .presentation__title {
-      font-size: @big-tablet-font-size;
-    }
+  .presentation__title {
+    font-size: @big-tablet-font-size;
+  }
 
-    .presentation__description {
-      width: 415px;
-    }
+  .presentation__description {
+    width: 415px;
+  }
 
-    .presentation__content {
-      padding-top: 78px;
+  .presentation__content {
+    position: relative;
+    padding-top: 70px;
+    width: 84.375%;
+    max-width: 810px;
+
+    img {
+      height: 499px;
     }
+  }
+
+  .presentation__interface {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 93px;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .presentation__timeline {
+    position: absolute;
+    left: 14.35%;
+    bottom: 23px;
+    width: 60%;
+    height: 45px;
+    background-color: transparent;
+  }
+
+  .presentation__bar {
+    left: 0;
+    bottom: 50%;
+    width: 100%;
+  }
+
+  .presentation__toggle {
+    left: 28%;
+  }
+
+  .presentation__controls {
+    left: 0;
+    width: 100%;
+    height: 66px;
+    background-color: transparent;
+  }
+
+  .presentation__button {
+    top: 35px;
+    fill: #ffffff;
+  }
+
+  .presentation__button--replay {
+    left: 30px;
+  }
+
+  .presentation__button--subtitles {
+    right: 80px;
+  }
+
+  .presentation__button--fullscreen {
+    right: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .presentation__content {
+    width: 66.66%;
+    max-width: 800px;
+
+    img {
+      height: 500px;
+    }
+  }
+
+  .presentation__timeline {
+    left: 11.625%;
+    width: 67.5%;
+  }
+
+  .presentation__bar {
+    left: 0;
+    bottom: 50%;
+    width: 100%;
+  }
+
+  .presentation__toggle {
+    left: 20.4%;
+  }
+
+  .presentation__controls {
+    left: 0;
+    width: 100%;
+    height: 66px;
+    background-color: transparent;
+  }
+
+  .presentation__button {
+    top: 35px;
+    fill: #ffffff;
+  }
+
+  .presentation__button--replay {
+    left: 27px;
+  }
+
+  .presentation__button--subtitles {
+    right: 86px;
+  }
+
+  .presentation__button--fullscreen {
+    right: 36px;
   }
 }
