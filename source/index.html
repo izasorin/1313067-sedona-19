@@ -70,6 +70,10 @@
               </div>
               <div class="advantage__picture">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.webp 1x, img/main-city-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/main-city-tablet@1x.webp 1x, img/main-city-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/main-city-mobile@1x.webp 1x, img/main-city-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
                   <img class="advantage__image" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" alt="Фото города Седона">
@@ -79,25 +83,24 @@
             <li class="advantages__item features">
                 <ul class="features__list">
                   <li class="features__item features__item--house">
-                    <h3 class="features__title">Жилье</h3>
+                    <h3 class="features__title"><svg class="features__icon features__icon--house" width="37" height="36" ><use xlink:href="img/sprite.svg#icon-house"></use></svg>Жилье</h3>
                     <p class="features__description">
                       Рекомендуем пожить в настоящем мотеле, все как в кино!
                     </p>
                   </li>
                   <li class="features__item features__item--souvenirs">
-                    <h3 class="features__title">Сувениры</h3>
+                    <h3 class="features__title"><svg class="features__icon features__icon--souvenirs" width="32" height="38"><use xlink:href="img/sprite.svg#icon-gift"></use></svg>Сувениры</h3>
                     <p class="features__description">
                       Не только китайского, но и местного производства!
                     </p>
                   </li>
                   <li class="features__item features__item--food">
-                    <h3 class="features__title">Еда</h3>
+                    <h3 class="features__title"><svg class="features__icon features__icon--food" width="40" height="35"><use xlink:href="img/sprite.svg#icon-burger"></use></svg>Еда</h3>
                     <p class="features__description">
                       Всегда заказывайте фирменный бургер, вы&nbsp;не разочаруетесь!
                     </p>
                   </li>
                 </ul>
-
             </li>
             <li class="advantages__item advantages__item--bridge advantage">
               <div class="advantage__wrapper">
@@ -109,6 +112,10 @@
               </div>
               <div class="advantage__picture">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.webp 1x, img/main-bridge-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.webp 1x, img/main-bridge-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/main-bridge-mobile@1x.webp 1x, img/main-bridge-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
                   <img class="advantage__image" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="Фото каньона в городе Седона">
@@ -152,18 +159,20 @@
             Укажите предполагаемые даты поездки, и мы покажем вам лучшие
             предложения гостиниц в Седоне
           </p>
-          <a class="booking__find-hotel button" href="#">Найти гостиницу</a>
+          <a class="booking__find-hotel button" href="/booking/">Найти гостиницу</a>
         </div>
       </div>
       <div class="map">
-        <!-- Поставил временный-->
         <div class="map__wrapper">
-          <iframe
-            src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae051af885f82047808de816b18ec93910052dc383627e7951ea928b29f938e28&amp;source=constructor"
-            width="100%"
-            height="350"
-            frameborder="0"
-          ></iframe>
+          <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+            <img src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" alt="Карта региона Sedona">
+          </picture>
         </div>
       </div>
     </main>
@@ -175,53 +184,48 @@
             <li class="socials__item">
               <a class="socials__link socials__link--twitter" href="#">
                 <span class="visually-hidden">Twitter</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="14">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M11.283.153c1.736-.484 3.074.264 3.685 1.15.694-.225 1.372-.47 2.072-.69-.004.841-.538 1.478-.883 1.728.704.165 1.343-.481 1.343-.481-.175.977-1.035 1.746-1.611 1.977-.239 6.592-3.272 10.956-10.382 10.823h-.46c-.422 0-4.29-.45-5.047-1.843 2.341.192 4.011-.412 4.835-1.15-.989-.293-2.761-.464-3.07-2.881.362.105.583.223 1.228.117C1.757 8.067.385 7.366.461 5.218c.294.319 1.1.523 1.381.461C1.117 5.444-.188 2.398.921.843 2.794 2.655 4.769 4.364 8.29 4.528c.216-2.24 1.171-3.74 2.993-4.375z"
-                  />
-                </svg>
+                <svg class="copyright__twitter-icon" width="18" height="14" role="img"><use xlink:href="img/sprite.svg#icon-twitter"></use></svg>
+                <!--<svg xmlns="http://www.w3.org/2000/svg" width="18" height="14">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283.153c1.736-.484 3.074.264 3.685 1.15.694-.225 1.372-.47 2.072-.69-.004.841-.538 1.478-.883 1.728.704.165 1.343-.481 1.343-.481-.175.977-1.035 1.746-1.611 1.977-.239 6.592-3.272 10.956-10.382 10.823h-.46c-.422 0-4.29-.45-5.047-1.843 2.341.192 4.011-.412 4.835-1.15-.989-.293-2.761-.464-3.07-2.881.362.105.583.223 1.228.117C1.757 8.067.385 7.366.461 5.218c.294.319 1.1.523 1.381.461C1.117 5.444-.188 2.398.921.843 2.794 2.655 4.769 4.364 8.29 4.528c.216-2.24 1.171-3.74 2.993-4.375z"/>
+                </svg>-->
               </a>
             </li>
             <li class="socials__item">
               <a class="socials__link socials__link--facebook" href="#">
                 <span class="visually-hidden">Facebook</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="9" height="18">
-                  <path
-                    d="M6.275 3.356h2.398V0H5.795C2.656.181 1.54 2.387 1.948 6.114H0v3.518h1.959v9.312h3.837V9.632h2.857V6.114H5.787c-.022-1.045-.037-2.405.488-2.758z"
-                  />
-                </svg>
+                <svg class="copyright__facebook-icon" width="9" height="18" role="img"><use xlink:href="img/sprite.svg#icon-facebook"></use></svg>
+                <!--<svg xmlns="http://www.w3.org/2000/svg" width="9" height="18">
+                  <path d="M6.275 3.356h2.398V0H5.795C2.656.181 1.54 2.387 1.948 6.114H0v3.518h1.959v9.312h3.837V9.632h2.857V6.114H5.787c-.022-1.045-.037-2.405.488-2.758z"/>
+                </svg>-->
               </a>
             </li>
             <li class="socials__item">
               <a class="socials__link socials__link--youtube" href="#">
                 <span class="visually-hidden">Youtube</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14">
-                  <path
-                    d="M17.145 0H2.835A2.842 2.842 0 000 2.835v8.345a2.842 2.842 0 002.835 2.835h14.31a2.842 2.842 0 002.835-2.835V2.835A2.844 2.844 0 0017.145 0zM7.036 10.392V3.623l6.769 3.384-6.769 3.385z"
-                  />
-                </svg>
+                <svg class="copyright__youtube-icon" width="20" height="14" role="img"><use xlink:href="img/sprite.svg#icon-youtube"></use></svg>
+                <!--<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14">
+                  <path d="M17.145 0H2.835A2.842 2.842 0 000 2.835v8.345a2.842 2.842 0 002.835 2.835h14.31a2.842 2.842 0 002.835-2.835V2.835A2.844 2.844 0 0017.145 0zM7.036 10.392V3.623l6.769 3.384-6.769 3.385z"/>
+                </svg>-->
               </a>
             </li>
           </ul>
         </div>
         <div class="page-footer__copyright">
-          <a
-            class="copyright__link"
-            href="https://htmlacademy.ru/intensive/adaptive"
-          >
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="copyright__text">Разработано</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="34">
+            <svg class="copyright__htmlacademy-icon" width="37" height="44" role="img"><use xlink:href="img/sprite.svg#icon-htmlacademy"></use></svg>
+            <!--<svg xmlns="http://www.w3.org/2000/svg" width="27" height="34">
               <path
                 d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z"
               />
-            </svg>
+            </svg>-->
           </a>
         </div>
       </div>
     </footer>
     <script src="js/app.js"></script>
     <script src="js/picturefill.min.js" async></script>
+    <script src="js/svg4everybody.min.js"></script>
+    <script>svg4everybody(); </script>
   </body>
 </html>

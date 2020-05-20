@@ -38,7 +38,21 @@
   text-decoration: none;
   color: @text-color-reverse;
   background-color: @background-color-blue;
+  cursor: pointer;
   border: none;
+
+  &:hover {
+    background-color: @main-color-hover;
+  }
+
+  &:active {
+    background-color: @main-color-active;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
 }
 
 .feedback__footnote {

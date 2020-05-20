@@ -24,12 +24,37 @@
 }
 
 .features__title {
+  position: relative;
   margin: 0;
   padding-bottom: 17px;
   font-size: @main-font-size;
   line-height: @big-line-height;
   font-weight: bold;
   color: @title-color;
+}
+
+.features__icon {
+  position: absolute;
+  bottom: 15px;
+  fill: @main-color;
+
+  &--house {
+    left: -45px;
+    width: 37px;
+    height: 36px;
+  }
+
+  &--souvenirs {
+    left: -45px;
+    width: 32px;
+    height: 38px;
+  }
+
+  &--food {
+    left: -50px;
+    width: 40px;
+    height: 35px;
+  }
 }
 
 .features__description {
@@ -60,6 +85,29 @@
     padding-bottom: 30px;
     font-size: @medium-font-size;
     text-align: center;
+  }
+
+  .features__icon {
+    position: absolute;
+    bottom: 85px;
+    left: 90px;
+    fill: @main-color;
+
+    &--house {
+      width: 75px;
+      height: 72px;
+    }
+
+    &--souvenirs {
+      width: 64px;
+      height: 75px;
+      left: 95px;
+    }
+
+    &--food {
+      width: 77px;
+      height: 68px;
+    }
   }
 
   .features__description {
@@ -97,6 +145,13 @@
     padding-bottom: 20px;
     font-size: @medium-font-size;
     text-align: center;
+  }
+
+  .features__icon {
+    position: absolute;
+    bottom: 85px;
+    left: 165px;
+    fill: @main-color;
   }
 
   .features__description {

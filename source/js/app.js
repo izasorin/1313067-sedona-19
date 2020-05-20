@@ -12,3 +12,19 @@ navToggle.addEventListener("click", function () {
     navMain.classList.remove("main-nav--opened");
   }
 });
+
+/*
+var successModal = document.querySelector(".feedback__modal--sent");
+var successClose = successModal.querySelector(".feedback__modal--sent .modal__button");
+var successLink = document.querySelector(".feedback__button");
+
+successLink.addEventListener("submit", function (evt) {
+  evt.preventDefault();
+  successModal.classList.add("modal__show");
+});
+
+successClose.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  successModal.classList.remove("modal__show");
+});
+*/
