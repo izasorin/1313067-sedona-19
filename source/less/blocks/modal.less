@@ -4,7 +4,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
+  display: none;
   align-items: center;
   align-content: center;
   justify-content: center;
@@ -123,11 +123,29 @@
   }
 }
 
-/*
 .modal__show {
   display: flex;
+  animation: bounce 0.6s;
 }
-*/
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 
 @media (min-width: @tablet-width) {
   .feedback__modal--sent {

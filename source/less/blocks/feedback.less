@@ -10,11 +10,13 @@
 }
 
 .feedback__item {
-  margin: 25px 6.25%;
+  margin: 13px 6.25% 25px 6.25%;
   padding: 0;
   border: none;
 
   legend {
+    margin: 0 auto;
+    align-self: center;
     margin-bottom: 25px;
     text-align: center;
     font-size: @main-font-size;
@@ -25,7 +27,7 @@
 }
 
 .feedback__item--submit {
-  margin: 30px 6.25%;
+  margin: 36px 6.25%;
 }
 
 .feedback__button {
@@ -65,6 +67,9 @@
     align-items: baseline;
     flex-wrap: wrap;
     position: relative;
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
 
     &::after {
       content: "";
@@ -104,27 +109,6 @@
   .feedback__container:nth-child(5) {
     order: 5;
     width: 100%;
-  }
-
-  .feedback__container:nth-child(6) {
-    order: 6;
-    width: 100%;
-    position: relative;
-  }
-
-  .feedback__item {
-    margin: 30px 7.8%;
-
-    legend {
-      margin-bottom: 60px;
-      font-size: @medium-font-size;
-      line-height: @big-line-height;
-    }
-  }
-
-  .feedback__container:nth-child(2),
-  .feedback__container:nth-child(4),
-  .feedback__container:nth-child(5) {
     position: relative;
 
     legend {
@@ -150,6 +134,81 @@
     }
   }
 
+  .feedback__container:nth-child(6) {
+    order: 6;
+    width: 100%;
+    position: relative;
+  }
+
+  .feedback__item {
+    margin: 30px 7.8% 30px 7.8%;
+
+    legend {
+      margin-bottom: 60px;
+      font-size: @medium-font-size;
+      line-height: @big-line-height;
+    }
+  }
+
+  .feedback__item--submit {
+    margin-top: 25px;
+  }
+
+  .feedback__container:nth-child(2),
+  .feedback__container:nth-child(4) {
+    position: relative;
+
+    legend {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 55px;
+        left: 7.8%;
+        width: 125px;
+        height: 1px;
+        background-color: #e5e5e5;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 55px;
+        right: 7.8%;
+        width: 125px;
+        height: 1px;
+        background-color: #e5e5e5;
+      }
+    }
+  }
+
+  /*
+  .feedback__container:nth-child(5) {
+    position: relative;
+
+    legend {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 45px;
+        left: 7.8%;
+        width: 125px;
+        height: 1px;
+        background-color: #e5e5e5;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 45px;
+        right: 7.8%;
+        width: 125px;
+        height: 1px;
+        background-color: #e5e5e5;
+      }
+    }
+  }
+*/
+
   .feedback__button {
     width: 50%;
   }
@@ -172,7 +231,11 @@
   }
 
   .feedback__item {
-    margin: 30px 10%;
+    margin: 30px 10% 30px 10%;
+  }
+
+  .feedback__item--submit {
+    margin-bottom: 63px;
   }
 
   .feedback__container:nth-child(2),

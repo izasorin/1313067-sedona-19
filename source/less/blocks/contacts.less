@@ -1,3 +1,11 @@
+.contacts {
+  margin: 13px 6.25% 20px 6.25%;
+
+  legend {
+    margin-bottom: 20px;
+  }
+}
+
 .contacts__wrapper {
   display: flex;
   flex-direction: column;
@@ -5,6 +13,7 @@
 
 .contacts__group {
   position: relative;
+  margin: 0;
 
   &:last-child {
     input {
@@ -21,7 +30,7 @@
   &--phone::after {
     content: "";
     position: absolute;
-    bottom: 15px;
+    bottom: 10px;
     right: 0;
     width: 58px;
     height: 58px;
@@ -44,7 +53,7 @@
 .contacts__input {
   flex-grow: 1;
   margin-top: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   padding-left: 22px;
   height: 58px;
   width: 100%;
@@ -78,16 +87,38 @@
 
 @media (min-width: @tablet-width) {
   .contacts {
+    margin: 40px 7.8% 20px 7.8%;
+
     legend {
-      margin-bottom: 30px;
+      margin-bottom: 25px;
+    }
+
+    input {
+      margin-bottom: 20px;
+    }
+  }
+
+  .contacts__label {
+    padding-left: 20px;
+
+    &--phone::after {
+      bottom: 21px;
+      right: 0;
+    }
+
+    &--email::after {
+      bottom: 0;
+      right: 0;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .contacts {
+    margin: 40px 10% 20px 10%;
+
     legend {
-      margin-bottom: 77px;
+      margin-bottom: 72px;
     }
 
     .contacts__wrapper {
@@ -108,20 +139,29 @@
 
     .contacts__label {
       padding: 0;
-      padding-right: 16px;
+      padding-right: 20px;
 
       &--addition {
         display: none;
       }
 
-      &--phone::after,
       &--phone::after {
         bottom: 0;
+        right: 32px;
+      }
+
+      &--email::after {
+        bottom: 0;
+        right: 1px;
       }
     }
 
     .contacts__input {
+      position: relative;
+      width: 257px;
+      flex-grow: 0;
       margin: 0;
+      padding-left: 17px;
     }
   }
 }

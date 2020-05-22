@@ -9,6 +9,7 @@
   padding: 0;
   margin: 0;
   margin-top: 41px;
+  margin-bottom: 10px;
   list-style: none;
 }
 
@@ -26,7 +27,7 @@
 .features__title {
   position: relative;
   margin: 0;
-  padding-bottom: 17px;
+  padding-bottom: 9px;
   font-size: @main-font-size;
   line-height: @big-line-height;
   font-weight: bold;
@@ -35,7 +36,7 @@
 
 .features__icon {
   position: absolute;
-  bottom: 15px;
+  bottom: 8px;
   fill: @main-color;
 
   &--house {
@@ -61,6 +62,7 @@
   width: 210px;
   margin: 0;
   padding: 0;
+  padding-top: 2px;
   font-size: @small-font-size;
   line-height: @small-line-height;
   color: @text-color;
@@ -78,19 +80,20 @@
     justify-content: space-around;
     align-items: center;
     margin: 0;
-    margin-top: 151px;
+    margin-top: 160px;
   }
 
   .features__title {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     font-size: @medium-font-size;
     text-align: center;
   }
 
   .features__icon {
     position: absolute;
-    bottom: 85px;
-    left: 90px;
+    bottom: 75px;
+    left: 50%;
+    transform: translateX(-50%,);
     fill: @main-color;
 
     &--house {
@@ -101,7 +104,6 @@
     &--souvenirs {
       width: 64px;
       height: 75px;
-      left: 95px;
     }
 
     &--food {
@@ -149,13 +151,16 @@
 
   .features__icon {
     position: absolute;
-    bottom: 85px;
-    left: 165px;
     fill: @main-color;
   }
 
   .features__description {
     max-width: 100%;
     width: 283px;
+  }
+
+  .features__description--line-break {
+    display: table;
+    margin: 0 auto;
   }
 }
