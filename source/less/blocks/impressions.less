@@ -1,14 +1,18 @@
+.impressions {
+  margin: 23px 6.25% 10px 6.25%;
+}
+
 .impressions__group {
   &:not(:last-child) {
-    margin-bottom: 47px;
+    margin-bottom: 45px;
   }
 
   &:first-child {
-    margin-top: 22px;
+    margin-top: 10px;
   }
 
   &:last-child {
-    margin-bottom: 22px;
+    margin-bottom: 30px;
   }
 }
 
@@ -44,7 +48,7 @@ input[type="radio"]:not(:checked) {
   border-color: @background-color-grey-form-hover;
 }
 
-.impressions__input--radio:active + label::before {
+.impressions__input--radio:disabled + label::before {
   background-color: @background-color-grey-form-active;
   border-color: @background-color-grey-form-active;
 }
@@ -66,7 +70,7 @@ input[type="radio"]:not(:checked) {
   border: 18px solid @background-color-grey-form-hover;
 }
 
-.impressions__input--radio:checked:active + label::before {
+.impressions__input--radio:checked:disabled + label::before {
   background-color: rgba(51, 51, 51, 0.5);
   border: 18px solid @background-color-grey-form-active;
 }
@@ -78,6 +82,8 @@ input[type="radio"]:not(:checked) {
 
     legend {
       text-align: left;
+      margin-left: 0;
+      margin-bottom: 55px;
     }
   }
 

@@ -1,6 +1,14 @@
+.emotions {
+  margin: 20px 6.25% 10px 6.25%;
+
+  legend {
+    margin-bottom: 20px;
+  }
+}
+
 .emotions__textarea {
   display: block;
-  padding: 22px 33px 0 21px;
+  padding: 10px 25px 0 21px;
   width: 100%;
   height: 160px;
   box-sizing: border-box;
@@ -27,5 +35,25 @@
     background-color: @text-color-reverse;
     border: 4px solid @text-color-grey;
     outline: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .emotions {
+    margin: 30px 7.8% 30px 7.8%;
+
+    legend {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .emotions {
+    margin: 27px 10% 27px 10%;
+
+    legend {
+      margin-bottom: 60px;
+    }
   }
 }

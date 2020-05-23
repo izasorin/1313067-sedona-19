@@ -1,5 +1,17 @@
-/* Стили для карты */
-.map__wrapper {
+.map {
+  position: relative;
+}
+
+.map__interective {
+  width: 100%;
+  height: 350px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.map__image {
   position: relative;
   margin: 0 auto;
 
@@ -24,7 +36,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .map__wrapper {
+  .map__image {
     &::after {
       content: "";
       left: 48%;
@@ -33,7 +45,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .map__wrapper {
+  .map__image {
     max-width: 1200px;
 
     &::after {

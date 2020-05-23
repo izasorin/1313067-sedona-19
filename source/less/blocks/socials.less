@@ -2,15 +2,23 @@
   display: flex;
   justify-content: space-around;
   margin: 0;
-  padding: 41px 84px 40px 85px;
+  padding: 35px 84px 40px 82px;
   list-style: none;
 }
 
 .socials__item {
+  margin-right: 6px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.socials__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 6px;
+
   width: 46px;
   height: 48px;
   background-color: @main-color;
@@ -18,10 +26,6 @@
 
   svg {
     fill: @text-color-reverse;
-  }
-
-  &:last-child {
-    margin-right: 0;
   }
 
   &:hover {

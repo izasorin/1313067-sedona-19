@@ -1,5 +1,6 @@
 .presentation {
-  padding-top: 39px;
+  padding-top: 30px;
+  padding-bottom: 110px;
 }
 
 .presentation__wrapper {
@@ -11,7 +12,7 @@
 .presentation__title {
   margin: 0;
   padding: 0;
-  padding-bottom: 30px;
+  padding-bottom: 25px;
   font-size: @main-font-size;
   line-height: @big-line-height;
   font-weight: bold;
@@ -30,7 +31,7 @@
 
 .presentation__content {
   position: relative;
-  padding-top: 40px;
+  padding-top: 30px;
   width: 100%;
 
   img {
@@ -85,6 +86,15 @@
   cursor: pointer;
   border: none;
   background: transparent;
+
+  &:hover {
+    fill: @text-color;
+  }
+
+  &:focus {
+    fill: @text-color;
+    opacity: 0.3;
+  }
 }
 
 .presentation__button--replay {
@@ -102,9 +112,11 @@
 @media (min-width: @tablet-width) {
   .presentation {
     padding-top: 68px;
+    padding-bottom: 45px;
   }
 
   .presentation__title {
+    padding-bottom: 30px;
     font-size: @big-tablet-font-size;
   }
 
@@ -160,6 +172,14 @@
   .presentation__button {
     top: 35px;
     fill: #ffffff;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      opacity: 0.3;
+    }
   }
 
   .presentation__button--replay {
@@ -176,6 +196,20 @@
 }
 
 @media (min-width: @desktop-width) {
+  .presentation {
+    padding-top: 71px;
+    padding-bottom: 84px;
+  }
+
+  .presentation__title {
+    padding-bottom: 30px;
+    font-size: @big-tablet-font-size;
+  }
+
+  .presentation__description {
+    width: 415px;
+  }
+
   .presentation__content {
     width: 66.66%;
     max-width: 800px;

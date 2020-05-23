@@ -1,10 +1,18 @@
+.sights {
+  margin: 20px 6.25% 20px 6.25%;
+
+  legend {
+    margin-bottom: 20px;
+  }
+}
+
 .sights__group {
   &:not(:last-child) {
-    margin-bottom: 63px;
+    margin-bottom: 53px;
   }
 
   &:first-child {
-    margin-top: 16px;
+    margin-top: 7px;
   }
 
   &:last-child {
@@ -42,7 +50,7 @@ input[type="checkbox"]:not(:checked) {
   background-color: @background-color-grey-form-hover;
 }
 
-.sights__input--checkbox:active + label::before {
+.sights__input--checkbox:disabled + label::before {
   background-color: @background-color-grey-form-active;
 }
 
@@ -64,16 +72,20 @@ input[type="checkbox"]:not(:checked) {
   background-color: @background-color-grey-form-hover;
 }
 
-/*.sights__input--checkbox:checked:active + label::before {
-  background-color: @background-color-grey-form-active;
-}*/
-
-.sights__input--checkbox:checked:active + label::before {
+.sights__input--checkbox:checked:disabled + label::before {
   background-color: rgba(50, 50, 50, 0.5);
   opacity: 0.5;
 }
 
 @media (min-width: @tablet-width) {
+  .sights {
+    margin: 30px 7.8% 20px 7.8%;
+
+    legend {
+      margin-bottom: 50px;
+    }
+  }
+
   .sights__wrapper {
     display: flex;
     flex-direction: row;
@@ -87,32 +99,53 @@ input[type="checkbox"]:not(:checked) {
     margin: 0;
     width: 40%;
 
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-bottom: 60px;
+    }
+
     &:nth-child(3),
     &:nth-child(4) {
       margin: 0;
       margin-bottom: 33px;
     }
   }
+
+  .sights__label {
+    padding-left: 80px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .sights {
+    margin: 40px 10% 50px 10%;
+
     legend {
       margin-bottom: 45px;
     }
   }
 
   .sights__wrapper {
+    justify-content: space-between;
     margin: 0;
   }
 
   .sights__group {
-    width: 20.3%;
+    width: 21%;
     margin: 0;
-    padding: 0;
 
-    &:not(:nth-child(4n + 4)) {
-      margin-right: 6%;
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-bottom: 0;
     }
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      margin-bottom: 0;
+    }
+  }
+
+  .sights__label {
+    padding-left: 80px;
   }
 }
