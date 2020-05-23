@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header">
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
@@ -43,7 +46,7 @@
           <img src="img/text-sedona.svg" width="229" height="39" alt="Welcome to the gorgeous Sedona">
         </div>
           <h1 class="introduction__title">Оставьте свой отзыв</h1>
-          <p class="introduction__description" >Помогите&nbsp;нашим&nbsp;отелям&nbsp;стать&nbsp;лучше! оставьте&nbsp;отзыв&nbsp;о&nbsp;них, а&nbsp;также&nbsp;о посещенных&nbsp;вами достопримечательностях</p>
+          <p class="introduction__description">Помогите&nbsp;нашим&nbsp;отелям&nbsp;стать&nbsp;лучше! оставьте&nbsp;отзыв&nbsp;о&nbsp;них, а&nbsp;также&nbsp;о посещенных&nbsp;вами достопримечательностях</p>
       </div>
       <section>
         <h2 class="visually-hidden">Форма обратной связи</h2>
@@ -54,11 +57,11 @@
               <div class="represent__wrapper">
                 <div class="represent__group">
                   <label class="represent__label" for="firstname-field">ИМЯ*:</label>
-                  <input class="represent__input" name="firstname" id="firstname-field" type="text" placeholder="Петр" required>
+                  <input class="represent__input" name="firstname" id="firstname-field" type="text" placeholder="Петр" required="">
                 </div>
                 <div class="represent__group">
                   <label class="represent__label" for="surname-field">ФАМИЛИЯ*:</label>
-                  <input class="represent__input" name="surname" id="surname-field" type="text" placeholder="Иванов" required>
+                  <input class="represent__input" name="surname" id="surname-field" type="text" placeholder="Иванов" required="">
                 </div>
                 <div class="represent__group">
                   <label class="represent__label" for="midname-field">Отчество:</label>
@@ -73,11 +76,11 @@
               <div class="contacts__wrapper">
                 <div class="contacts__group">
                   <label class="contacts__label contacts__label--phone" for="phone-field"><span class="contacts__label--addition">Контактный</span> телефон*:</label>
-                  <input class="contacts__input contacts__input--phone" name="phone" id="phone-field" type="tel" placeholder="Введите телефон" required pattern="(\+?\d[- .]*){7,13}">
+                  <input class="contacts__input contacts__input--phone" name="phone" id="phone-field" type="tel" placeholder="Введите телефон" required="" pattern="(\+?\d[- .]*){7,13}">
                 </div>
                 <div class="contacts__group">
                   <label class="contacts__label contacts__label--email" for="email-field">Электронная&nbsp;почта*:</label>
-                  <input class="contacts__input contacts__input--email" name="email" id="email-field" type="email" placeholder="Введите e-mail" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}">
+                  <input class="contacts__input contacts__input--email" name="email" id="email-field" type="email" placeholder="Введите e-mail" required="" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}">
                 </div>
               </div>
             </fieldset>
@@ -87,7 +90,7 @@
               <legend>Ваше общее впечатление:</legend>
               <div class="impressions__wrapper">
                 <div class="impressions__group">
-                  <input class="impressions__input impressions__input--radio" type="radio" name="impressions" id="positive" value="positive" checked>
+                  <input class="impressions__input impressions__input--radio" type="radio" name="impressions" id="positive" value="positive" checked="">
                   <label class="impressions__label impressions__label--radio" for="positive">Скорее положительное</label>
                 </div>
                 <div class="impressions__group">
@@ -106,15 +109,15 @@
               <legend>Посещенные<br>достопримечательности</legend>
               <div class="sights__wrapper">
                 <div class="sights__group">
-                  <input class="sights__input sights__input--checkbox" type="checkbox" name="sight-bridge" id="sight-bridge" checked>
+                  <input class="sights__input sights__input--checkbox" type="checkbox" name="sight-bridge" id="sight-bridge" checked="">
                   <label class="sights__label sights__label--checkbox" for="sight-bridge">Мост Дьявола</label>
                 </div>
                 <div class="sights__group">
-                  <input class="sights__input sights__input--checkbox" type="checkbox" name="sight-mountain" id="sight-mountain" checked>
+                  <input class="sights__input sights__input--checkbox" type="checkbox" name="sight-mountain" id="sight-mountain" checked="">
                   <label class="sights__label sights__label--checkbox" for="sight-mountain">Гора-Колокол</label>
                 </div>
                 <div class="sights__group">
-                  <input class="sights_input sights__input--checkbox" type="checkbox" name="sight-park" id="sight-park" checked>
+                  <input class="sights_input sights__input--checkbox" type="checkbox" name="sight-park" id="sight-park" checked="">
                   <label class="sights__label sights__label--checkbox" for="sight-park">Слайд-парк</label>
                 </div>
                 <div class="sights__group">
@@ -128,7 +131,7 @@
             <fieldset class="feedback__item emotions">
               <legend>Опишите свои эмоции:</legend>
               <div class="emotions__wrapper">
-                <textarea class="emotions__textarea" name="description" id="description"  placeholder="Опишите подробно все свои восторги" ></textarea>
+                <textarea class="emotions__textarea" name="description" id="description" placeholder="Опишите подробно все свои восторги"></textarea>
               </div>
             </fieldset>
           </div>
@@ -169,7 +172,10 @@
         <div class="page-footer__copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="copyright__text">Разработано</span>
-            <svg class="copyright__htmlacademy-icon" width="37" height="44"><use xlink:href="img/sprite.svg#icon-htmlacademy"></use></svg>
+            <!--<svg class="copyright__htmlacademy-icon" width="37" height="44" role="img"><use xlink:href="#icon-htmlacademy"></use></svg>-->
+            <svg class="copyright__htmlacademy-icon" xmlns="http://www.w3.org/2000/svg" width="37" height="44">
+              <path d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z"></path>
+            </svg>
           </a>
         </div>
       </div>
@@ -201,7 +207,7 @@
       </div>
     </section>
     <script src="js/app.js"></script>
-    <script src="js/picturefill.min.js" async></script>
+    <script src="js/picturefill.min.js" async=""></script>
     <script src="js/svg4everybody.min.js"></script>
     <script>svg4everybody(); </script>
   </body>
