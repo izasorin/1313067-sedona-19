@@ -89,7 +89,7 @@ gulp.task("js", function () {
     .src("source/js/*.js")
     .pipe(concat("all.js"))
     .pipe(uglify())
-    .pipe(rename("allScripts.min.js"))
+    .pipe(rename("scripts.min.js"))
     .pipe(gulp.dest("build/js"));
 });
 
