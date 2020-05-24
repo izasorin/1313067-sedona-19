@@ -13,7 +13,9 @@ var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
+var htmlmin = require("gulp-htmlmin");
 var uglify = require("gulp-uglify");
+var concat = require("gulp-concat");
 var include = require("posthtml-include");
 var del = require("del");
 
@@ -71,11 +73,23 @@ gulp.task("clean", function () {
   return del("build");
 });
 
+gulp.task("html", function () {
+  return gulp
+    .src("source/*.html")
+    .pipe(
+      htmlmin({
+        collapseWhitespace: true,
+      })
+    )
+    .pipe(gulp.dest("build"));
+});
+
 gulp.task("js", function () {
   return gulp
     .src("source/js/*.js")
+    .pipe(concat("all.js"))
     .pipe(uglify())
-    .pipe(rename("script.min.js"))
+    .pipe(rename("allScripts.min.js"))
     .pipe(gulp.dest("build/js"));
 });
 
