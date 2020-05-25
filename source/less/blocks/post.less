@@ -53,13 +53,21 @@
   padding: 0;
   padding-top: 10px;
   font-weight: bold;
+
+  svg {
+    position: absolute;
+    opacity: 0.3;
+    left: -37px;
+  }
 }
 
+/*
 .likes__icon {
   position: absolute;
   opacity: 0.3;
   left: -37px;
 }
+*/
 
 @media (min-width: @tablet-width) {
   .post {
@@ -111,10 +119,10 @@
     position: absolute;
     bottom: 30px;
     right: 30px;
-  }
 
-  .likes__icon {
-    left: -30px;
+    svg {
+      left: -30px;
+    }
   }
 }
 
@@ -150,10 +158,12 @@
     }
   }
 
-  .likes__icon {
-    position: absolute;
-    fill: #ffffff;
-    opacity: 1;
-    left: -25px;
+  .post__likes {
+    svg {
+      position: absolute;
+      fill: #ffffff;
+      opacity: 1;
+      left: -30px;
+    }
   }
 }

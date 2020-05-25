@@ -55,11 +55,21 @@
       font-size: @small-font-size;
       line-height: @big-line-height;
       background-color: #ffffff;
-      color: @text-color;
+      color: #766357;
       border: none;
+
+      &:hover {
+        color: #604e43;
+      }
+
+      &:active {
+        color: rgba(118, 99, 87, 0.3);
+      }
     }
 
     a[href] {
+      color: @text-color;
+
       &:hover {
         color: @main-color;
         background-color: #ffffff;
