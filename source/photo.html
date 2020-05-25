@@ -4,15 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
-    <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin="">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <div style="display: none;">
       <include src="build/img/sprite.svg"></include>
     </div>
-    <header class="page-header">
+    <header>
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -64,13 +64,13 @@
 
                     <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
-                    <img class="post__image" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" alt="Фотография не родных просторов Седоны от Бориса">
+                    <img src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" alt="Фотография не родных просторов Седоны от Бориса">
                   </picture>
                 </a>
                 <div class="post__group">
                   <h3 class="post__title">Неродные просторы</h3>
                   <p class="post__user-name">Автор фото: Борис</p>
-                  <p class="post__likes"><svg class="likes__icon" width="22" height="20"><use xlink:href="img/sprite.svg#icon-like"></use></svg>1350</p>
+                  <p class="post__likes"><svg width="22" height="20"><use xlink:href="img/sprite.svg#icon-like"></use></svg>1350</p>
                 </div>
               </div>
             </li>
@@ -84,13 +84,13 @@
 
                     <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
-                    <img class="post__image" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" alt="Фотография растительности Седоны от Сергея">
+                    <img src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" alt="Фотография растительности Седоны от Сергея">
                   </picture>
                 </a>
                 <div class="post__group">
                   <h3 class="post__title">Местная растительность</h3>
                   <p class="post__user-name">Автор фото: Сергей</p>
-                  <p class="post__likes"><svg class="likes__icon" width="22" height="20"><use xlink:href="img/sprite.svg#icon-like"></use></svg>143</p>
+                  <p class="post__likes"><svg width="22" height="20"><use xlink:href="img/sprite.svg#icon-like"></use></svg>143</p>
                 </div>
               </div>
             </li>
@@ -104,13 +104,13 @@
 
                     <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
-                    <img class="post__image" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" alt="Фотография дороги на север от Седоны от Петра">
+                    <img src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" alt="Фотография дороги на север от Седоны от Петра">
                   </picture>
                 </a>
                 <div class="post__group">
                   <h3 class="post__title">Дорога на север</h3>
                   <p class="post__user-name">Автор фото: Петр</p>
-                  <p class="post__likes"><svg class="likes__icon" width="22" height="20"><use xlink:href="img/sprite.svg#icon-like"></use></svg>96</p>
+                  <p class="post__likes"><svg width="22" height="20"><use xlink:href="img/sprite.svg#icon-like"></use></svg>96</p>
                 </div>
               </div>
             </li>
@@ -124,13 +124,13 @@
 
                     <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
-                    <img class="post__image" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Фотография каньона Седоны от Антона">
+                    <img src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Фотография каньона Седоны от Антона">
                   </picture>
                 </a>
                 <div class="post__group">
                   <h3 class="post__title">Мост дьявола</h3>
                   <p class="post__user-name">Автор фото: Антон</p>
-                  <p class="post__likes"><svg class="likes__icon" width="22" height="20"><use xlink:href="img/sprite.svg#icon-like"></use></svg>254</p>
+                  <p class="post__likes"><svg width="22" height="20"><use xlink:href="img/sprite.svg#icon-like"></use></svg>254</p>
                 </div>
               </div>
             </li>
@@ -183,28 +183,27 @@
             <li class="socials__item">
               <a class="socials__link socials__link--twitter" href="#">
                 <span class="visually-hidden">Twitter</span>
-                <svg class="copyright__twitter-icon" width="18" height="14" role="img"><use xlink:href="#icon-twitter"></use></svg>
+                <svg width="18" height="14" role="img"><use xlink:href="#icon-twitter"></use></svg>
               </a>
             </li>
             <li class="socials__item">
               <a class="socials__link socials__link--facebook" href="#">
                 <span class="visually-hidden">Facebook</span>
-                <svg class="copyright__facebook-icon" width="9" height="18" role="img"><use xlink:href="#icon-facebook"></use></svg>
+                <svg width="9" height="18" role="img"><use xlink:href="#icon-facebook"></use></svg>
               </a>
             </li>
             <li class="socials__item">
               <a class="socials__link socials__link--youtube" href="#">
                 <span class="visually-hidden">Youtube</span>
-                <svg class="copyright__youtube-icon" width="20" height="14" role="img"><use xlink:href="#icon-youtube"></use></svg>
+                <svg width="20" height="14" role="img"><use xlink:href="#icon-youtube"></use></svg>
               </a>
             </li>
           </ul>
         </div>
         <div class="page-footer__copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <span class="copyright__text">Разработано</span>
-            <!--<svg class="copyright__htmlacademy-icon" width="37" height="44" role="img"><use xlink:href="#icon-htmlacademy"></use></svg>-->
-            <svg class="copyright__htmlacademy-icon" xmlns="http://www.w3.org/2000/svg" width="37" height="44">
+          <a href="https://htmlacademy.ru/intensive/adaptive">
+            <span>Разработано</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="37" height="44">
               <path d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z"></path>
             </svg>
           </a>
