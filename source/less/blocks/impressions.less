@@ -75,6 +75,11 @@ input[type="radio"]:not(:checked) {
   border: 18px solid @background-color-grey-form-active;
 }
 
+.impressions__input--radio:focus + label::before {
+  background-color: @background-color-grey-form-hover;
+  border-color: @background-color-grey-form-hover;
+}
+
 @media (min-width: @tablet-width) {
   .impressions {
     margin-top: 0;

@@ -77,6 +77,10 @@ input[type="checkbox"]:not(:checked) {
   opacity: 0.5;
 }
 
+.sights__input--checkbox:focus + label::before {
+  background-color: @background-color-grey-form-hover;
+}
+
 @media (min-width: @tablet-width) {
   .sights {
     margin: 30px 7.8% 20px 7.8%;
